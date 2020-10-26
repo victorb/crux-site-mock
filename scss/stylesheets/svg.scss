@@ -1,0 +1,36 @@
+#cube, #clock, #graph {
+    height: initial;
+}
+
+#cube-wrapper {
+    width: 15em;
+}
+
+#clock-wrapper {
+    width: 8em;
+    margin-top: 40px;
+}
+
+#graph-wrapper {
+    width: 15em;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    #cube-wrapper {
+	margin: auto;
+	margin-top: 0px;
+    }
+
+    #clock-wrapper {
+	margin: auto;
+	margin-top: 80px;
+    }
+
+    #graph-wrapper {
+        margin: auto;
+	margin-top: 100px;
+}
+
+}

@@ -1,0 +1,65 @@
+@import "stylesheets/variables";
+@import "stylesheets/adoc";
+@import "stylesheets/crux_snippets";
+@import "stylesheets/svg";
+@import "stylesheets/pricing";
+@import "stylesheets/beta";
+@import "stylesheets/oss-support";
+@import "stylesheets/page-toc";
+@import "stylesheets/pagination";
+@import "stylesheets/code-tabs";
+@import "stylesheets/navbar";
+@import "stylesheets/footer";
+
+a:hover,
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
+$navbar-link-color: #5c5c5c;
+$navbar-link-color-hover: black;
+$navbar-link-color-visited: black;
+
+body {
+    --sticky-top: 80px;
+}
+
+@media (max-width: 767px) {
+    body {
+        --sticky-top: 66px;
+    }
+}
+
+html,
+body {
+    font-size: $base;
+    min-width: 320px;
+    top: var(--sticky-top);
+}
+
+strong,
+b {
+    font-weight: 500;
+}
+
+.highlight-sub-sect {
+    font-weight: 500;
+}
+
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        max-width: 90rem;
+    }
+}

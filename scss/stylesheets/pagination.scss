@@ -1,0 +1,27 @@
+nav.pagination {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e7e7e9;
+    line-height: 1;
+    padding-top: 0.75rem;
+
+    .prev {
+        padding-right: 0.5rem;
+    }
+
+    .next {
+        padding-left: 0.5rem;
+        text-align: right;
+    }
+
+    div.label {
+        color: grey;
+        font-size: 0.75em;
+        padding-bottom: 0.1rem;
+    }
+
+    a {
+        color: #333;
+        line-height: 1.3;
+    }
+}

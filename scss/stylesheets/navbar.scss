@@ -1,0 +1,335 @@
+.navigation {
+    position: relative;
+    z-index: 1000;
+}
+
+.navigation .navbar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    font-size: 16px;
+    transition: all 200ms;
+
+    .dropdown-list__link {
+        color: #222222;
+    }
+
+    a {
+        color: white;
+    }
+
+    .arrow g,
+    .hamburger path,
+    .link-github--desktop path {
+        fill: white;
+    }
+}
+
+.brand-svg {
+    .st0 {
+        fill: none;
+    }
+
+    .st1 {
+        fill: #F7951C;
+    }
+
+    .st2 {
+        fill: #FFFFFF;
+    }
+}
+
+.navigation .navbar--colored {
+    background-color: black;
+    box-shadow: 0 0 33px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navigation .navbar--default {
+    background-color: white;
+    box-shadow: 0 0 33px 0 rgba(0, 0, 0, 0.2);
+
+    a {
+        color: #222222;
+    }
+
+    .nav-menu__link--mobile,
+    .nav-dropdown--mobile a,
+    .dropdown-list__link--mobile {
+        color: white;
+    }
+
+    .arrow g,
+    .hamburger path,
+    .link-github--desktop path {
+        fill: #222222;
+    }
+
+    .brand-svg {
+        .st2 {
+            fill: #040404;
+        }
+    }
+}
+
+.navigation .nav-container {
+    max-width: 90rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation .brand {
+    margin-left: 1rem;
+    margin-right: 30px;
+}
+
+.navigation .brand svg {
+    height: 40px;
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.navigation .nav__menu {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.navigation .nav__menu .nav-menu__link {
+    padding: 21px 15px;
+    transition: color 200ms ease;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-right: 3px;
+}
+
+.navigation .nav__menu .nav-menu__link:hover {
+    color: #f7951c;
+    cursor: pointer;
+}
+
+.navigation .nav-dropdown__title a {
+    transition: color 200ms ease;
+}
+
+.navigation .arrow g {
+    transition: fill 200ms ease;
+}
+
+.navigation .nav__menu .nav-menu__link.nav-dropdown:hover {
+    cursor: initial;
+
+    .nav-dropdown__title a {
+        color: #f7951c;
+    }
+
+    .arrow g {
+        fill: #f7951c;
+    }
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.navigation .link-github--desktop {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.navigation .link-github--mobile {
+    display: none;
+    max-width: 100%;
+    vertical-align: middle;
+
+    path {
+        fill: white;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navigation .link-github--desktop {
+        display: none;
+    }
+
+    .navigation .link-github--mobile {
+        display: inline-block;
+    }
+}
+
+.navigation .nav-dropdown {
+    position: relative;
+}
+
+
+.navigation .nav-dropdown__title {
+    display: flex;
+    align-items: center;
+}
+
+.navigation .arrow {
+    transform: rotate(90deg);
+}
+
+.navigation .nav-dropdown__list {
+    display: none;
+}
+
+.navigation .nav-dropdown:hover .nav-dropdown__list {
+    display: block;
+}
+
+.navigation .nav-dropdown__list {
+    overflow: hidden;
+    min-width: 100%;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navigation .overlay {
+    display: none;
+    cursor: initial;
+}
+
+.navigation .overlay::before {
+    content: "";
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.navigation .dropdown-list__link {
+    position: relative;
+    vertical-align: top;
+    text-decoration: none;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    transition: background-color 200ms ease, color 200ms ease;
+    font-size: 13px;
+    padding: 20px;
+    display: block;
+    color: #222222;
+}
+
+.navigation .dropdown-list__link:hover {
+    background: #b3b3b3;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation .hamburger {
+    display: none;
+    padding: 19px 0;
+}
+
+.navigation .nav-menu__mobile {
+    max-height: 0px;
+    display: flex;
+    top: 65px;
+    overflow: hidden;
+    transition: max-height 200ms linear;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+}
+
+@media screen and (max-width: 991px) {
+    .navigation .nav-container {
+        max-width: 100%;
+    }
+
+    .navigation .nav__menu {
+        display: none;
+    }
+
+    .navigation .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .navigation .nav-menu__mobile--toggled {
+        max-height: 100vh;
+    }
+
+    .navigation .nav-menu__link--mobile {
+        width: 100%;
+        padding: 20px;
+        transition: background 200ms ease;
+        font-size: 16px;
+        color: white;
+        background: #292c31;
+        letter-spacing: 1px;
+    }
+
+    .navigation .nav-menu__link--mobile:hover {
+        background: #000;
+        cursor: pointer;
+    }
+
+    .navigation .nav-dropdown--mobile {
+        position: relative;
+    }
+
+    .navigation .nav-dropdown__title--mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation .arrow g {
+        fill: white;
+    }
+
+    .navigation .nav-dropdown__list--mobile {
+        display: none;
+    }
+
+    .navigation .nav-dropdown__list-toggled--mobile {
+        display: block;
+        width: 100%;
+        background: #3b3b3b;
+    }
+
+    .navigation .dropdown-list__link--mobile {
+        position: relative;
+        vertical-align: top;
+        text-decoration: none;
+        color: white;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        white-space: nowrap;
+        transition: background-color 200ms ease, color 200ms ease;
+        font-size: 13px;
+        padding: 20px;
+        display: block;
+
+    }
+
+    .navigation .dropdown-list__link--mobile:hover {
+        background: #f7951c;
+        cursor: pointer;
+    }
+}

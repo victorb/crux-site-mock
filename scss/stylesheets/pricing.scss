@@ -1,0 +1,130 @@
+.pricing {
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 5em;
+    width: 70%;
+    max-width: 1024px;
+}
+
+.pricing h1 {
+    font-size: $b32;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.pricing__table {
+    border-radius: 8px;
+    border: 2px solid #f2f5f7;
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 0px 8px 3px #eeeeee;
+    -webkit-box-shadow: 0px 0px 8px 3px #eeeeee;
+}
+
+.pricing thead {
+    background: white;
+    border-bottom: 1px solid #dddddd;
+}
+
+.pricing thead tr th:first-child {
+    width: 35%;
+}
+
+.pricing thead th {
+    font-size: $b22;
+}
+
+.pricing th {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.pricing tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.pricing tbody td:not(:first-child) {
+    text-align: center;
+}
+
+.pricing tfoot td {
+    height: 200px;
+    text-align: center;
+    vertical-align: initial;
+}
+
+.pricing tfoot td:first-child {
+    text-align: left;
+}
+
+.foot-wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.foot-wrapper--flex {
+    display: none;
+    flex-direction: column;
+    padding-bottom: 2em;
+    margin-bottom: 5em;
+    align-items: center;
+}
+
+.foot-heading {
+    margin-top: 2em;
+}
+
+.foot-heading-description {
+    margin-top: 2em;
+}
+
+.foot-content {
+    margin-top: 3em;
+}
+
+.foot-content-link {
+    padding: 1em;
+    background: grey;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .pricing thead tr th:first-child {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .foot-wrapper--flex {
+	display: flex;
+    }
+
+    .pricing {
+	margin: auto;
+	margin-top: 50px;
+	width: 95%;
+    }
+
+    .pricing thead tr th:first-child {
+        width: 50%;
+    }
+    .pricing tfoot {
+	display: none;
+    }
+
+    .foot-heading {
+	text-align: center;
+    }
+
+    .foot-heading-description {
+	margin-top: 0em;
+    }
+
+    .foot-content {
+	margin-top: 2em;
+    }
+
+}
